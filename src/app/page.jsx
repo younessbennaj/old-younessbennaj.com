@@ -8,6 +8,7 @@ import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import hero from '@/images/hero.png'
+import avatar from '@/images/avatar.jpg'
 
 import Balancer from 'react-wrap-balancer'
 
@@ -116,7 +117,13 @@ export default async function Home() {
           <div className="relative overflow-hidden rounded-lg px-4 py-16 sm:px-8 lg:px-12">
             {/* // Grid 2 columns */}
             <div className="block md:hidden">
-              {/* <Image src={hero} alt="Youness Bennaj" /> */}
+              <div className="h-[100px] w-[100px] overflow-hidden rounded-full border-[4px] border-sky-200">
+                <Image
+                  className="h-full w-full"
+                  src={avatar}
+                  alt="Youness Bennaj"
+                />
+              </div>
             </div>
             <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 md:gap-y-12">
               <div className="pt-8">
@@ -148,8 +155,14 @@ export default async function Home() {
                   </SocialLink> */}
                 </div>
               </div>
-              <div className="hidden md:block">
-                {/* <Image src={hero} alt="Youness Bennaj" /> */}
+              <div className="hidden items-center justify-center md:flex">
+                <div className="h-[300px] w-[300px] overflow-hidden rounded-full border-[10px] border-sky-200">
+                  <Image
+                    className="h-full w-full"
+                    src={avatar}
+                    alt="Youness Bennaj"
+                  />
+                </div>
               </div>
             </div>
           </div>
