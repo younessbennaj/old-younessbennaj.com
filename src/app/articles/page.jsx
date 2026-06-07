@@ -33,9 +33,9 @@ function Article({ article }) {
 }
 
 export const metadata = {
-  title: 'Articles et guides pour réussir votre expatriation au Japon',
+  title: "Articles et guides pour s'installer et travailler au Japon",
   description:
-    'Retrouvez ici tous mes contenus longs : conseils pratiques, retours d’expérience et stratégies concrètes pour les développeurs et talents tech souhaitant vivre et travailler au Japon.',
+    "Retrouvez ici tous mes contenus longs : conseils pratiques, retours d’expérience et stratégies concrètes pour les développeurs et talents tech souhaitant vivre et travailler au Japon.",
 }
 
 export default async function ArticlesIndex() {
@@ -43,10 +43,10 @@ export default async function ArticlesIndex() {
 
   return (
     <SimpleLayout
-      title="Articles et guides pour réussir votre expatriation au Japon"
+      title="Articles et guides pour s'installer et travailler au Japon"
       intro="Retours d’expérience, conseils pratiques et stratégies concrètes pour les talents tech qui veulent s’installer et travailler au Japon."
     >
-      <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
+      <div className="md:dark:border-zinc-700/40 md:border-l md:border-zinc-100 md:pl-6">
         <div className="flex max-w-3xl flex-col space-y-16">
           {articles.map((article) => (
             <Article key={article.slug} article={article} />

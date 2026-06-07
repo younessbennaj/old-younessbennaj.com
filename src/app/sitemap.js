@@ -16,22 +16,9 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/simulateur`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-
     // ARTICLES
     {
-      url: `${baseUrl}/articles/guide-expatriation-japon-developpeur`,
+      url: `${baseUrl}/articles/guide-travail-au-japon-developpeur`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,

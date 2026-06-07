@@ -7,10 +7,10 @@ import '@/styles/tailwind.css'
 export const metadata = {
   title: {
     default:
-      'Youness Bennaj – Développeur web & consultant expatriation Japon pour talents tech.',
+      'Youness Bennaj – Développeur web basé à Tokyo, conseils pour talents tech au Japon.',
   },
   description:
-    'Je suis Youness, développeur web et consultant spécialisé dans l’expatriation au Japon pour les talents tech. Découvrez mes conseils, contenus et services pour réussir votre transition professionnelle vers le Japon.',
+    'Je suis Youness, développeur web basé à Tokyo. Je partage mon retour d’expérience et des conseils concrets pour les talents tech qui souhaitent s’installer et travailler au Japon.',
   alternates: {
     canonical: 'https://younessbennaj.com',
     types: {

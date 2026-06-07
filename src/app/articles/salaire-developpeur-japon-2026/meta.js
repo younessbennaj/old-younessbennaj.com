@@ -3,7 +3,7 @@ import banner from '@/images/salary-banner.jpg'
 export const article = {
   author: 'Youness Bennaj',
   createdAt: '2025-10-24',
-  category: 'expatriation',
+  category: 'travail',
   title: 'Salaire développeur au Japon : à quoi s’attendre en 2026 ?',
   readingTime: 15,
   image: banner,
