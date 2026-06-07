@@ -163,7 +163,9 @@ export default async function Home() {
           <div className="relative overflow-hidden rounded-lg px-4 py-16 sm:px-8 lg:px-12">
             <div className="flex flex-col gap-16 md:flex-row">
               <h2 className="dark:text-zinc-100 text-balance text-center text-4xl font-semibold tracking-tight text-zinc-800 md:text-left">
-                Des ressources concrètes pour s'installer et travailler au Japon
+                {
+                  "Des ressources concrètes pour s'installer et travailler au Japon"
+                }
               </h2>
               <div>
                 {/* // grid 2 * 2 */}
