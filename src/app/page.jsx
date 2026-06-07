@@ -19,7 +19,6 @@ import {
   ChevronRightIcon,
 } from '@heroicons/react/24/outline'
 
-import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { LinkedInIcon, XIcon } from '@/components/SocialIcons'
@@ -49,7 +48,7 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              'dark:bg-zinc-800 relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl',
               // rotations[imageIndex % rotations.length],
             )}
           >
@@ -95,7 +94,7 @@ function SocialLink({ className, href, children, icon: Icon, ...delegated }) {
       <Link
         {...delegated}
         href={href}
-        className="hover: dark:hover: group flex text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
+        className="hover: dark:hover: dark:text-zinc-200 group flex text-sm font-medium text-zinc-800 transition"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-sky-500" />
         <span className="ml-2 transition group-hover:text-sky-500">
@@ -117,20 +116,19 @@ export default async function Home() {
           <div className="relative overflow-hidden rounded-lg px-4 py-16 sm:px-8 lg:px-12">
             {/* // Grid 2 columns */}
             <div className="block md:hidden">
-              <Image src={hero} alt="Youness Bennaj" />
+              {/* <Image src={hero} alt="Youness Bennaj" /> */}
             </div>
             <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 md:gap-y-12">
               <div className="pt-8">
-                <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                  Développeur web & Consultant en expatriation au Japon
+                <h1 className="dark:text-zinc-100 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
+                  Développeur web basé au Japon
                 </h1>
-                <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+                <p className="dark:text-zinc-400 mt-6 text-base text-zinc-600">
                   Je suis Youness, développeur web basé à Tokyo. Après avoir
-                  concrétisé mon propre projet d’expatriation, j’aide
-                  aujourd’hui les professionnels de la tech à franchir le pas.
-                  Sur ce site, je partage mon retour d’expérience, des conseils
-                  pratiques, et propose un accompagnement personnalisé pour
-                  lancer sa carrière au Japon et réussir son installation.
+                  concrétisé mon propre projet professionnel au Japon, j’ai
+                  décidé de partager mon retour d’expérience et des conseils
+                  pratiques pour vous aider à votre tour à lancer votre carrière
+                  et réussir votre installation.
                 </p>
                 <div className="mt-6 flex gap-6">
                   <SocialLink
@@ -151,7 +149,7 @@ export default async function Home() {
                 </div>
               </div>
               <div className="hidden md:block">
-                <Image src={hero} alt="Youness Bennaj" />
+                {/* <Image src={hero} alt="Youness Bennaj" /> */}
               </div>
             </div>
           </div>
@@ -164,8 +162,8 @@ export default async function Home() {
         <div className="mx-auto mt-16 w-full max-w-7xl lg:px-8">
           <div className="relative overflow-hidden rounded-lg px-4 py-16 sm:px-8 lg:px-12">
             <div className="flex flex-col gap-16 md:flex-row">
-              <h2 className="text-balance text-center text-4xl font-semibold tracking-tight text-zinc-800 md:text-left dark:text-zinc-100">
-                Un accompagnement complet pour concrétiser votre projet au Japon
+              <h2 className="dark:text-zinc-100 text-balance text-center text-4xl font-semibold tracking-tight text-zinc-800 md:text-left">
+                Des ressources concrètes pour s'installer et travailler au Japon
               </h2>
               <div>
                 {/* // grid 2 * 2 */}
@@ -174,10 +172,10 @@ export default async function Home() {
                     <div className="mb-4 flex size-12 items-center justify-center rounded-md bg-sky-600 p-2 shadow-lg shadow-slate-600/30">
                       <PencilIcon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
+                    <h3 className="dark:text-zinc-100 text-lg font-semibold text-zinc-800">
                       Articles et contenus approfondis
                     </h3>
-                    <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+                    <p className="dark:text-zinc-400 mt-2 text-zinc-600">
                       Des décryptages complets sur les salaires, visas,
                       conditions de travail, modes de vie, etc.
                     </p>
@@ -186,22 +184,23 @@ export default async function Home() {
                     <div className="mb-4 flex size-12 items-center justify-center rounded-md bg-sky-600 p-2 shadow-lg shadow-slate-600/30">
                       <UserGroupIcon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
-                      Coaching et accompagnement
+                    <h3 className="dark:text-zinc-100 text-lg font-semibold text-zinc-800">
+                      Des insights du terrain
                     </h3>
-                    <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-                      Des sessions personnalisées pour définir une stratégie
-                      efficace, éviter les pièges et accélérer vos démarches.
+                    <p className="dark:text-zinc-400 mt-2 text-zinc-600">
+                      Des analyses et observations tirées de mon expérience
+                      quotidienne dans la tech japonaise, pour vous donner une
+                      vision juste et actuelle du marché.
                     </p>
                   </div>
                   <div className="flex flex-col items-center rounded-lg bg-white text-center md:items-start md:text-left">
                     <div className="mb-4 flex size-12 items-center justify-center rounded-md bg-sky-600 p-2 shadow-lg shadow-slate-600/30">
                       <SwatchIcon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
+                    <h3 className="dark:text-zinc-100 text-lg font-semibold text-zinc-800">
                       Curation de ressources clés
                     </h3>
-                    <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+                    <p className="dark:text-zinc-400 mt-2 text-zinc-600">
                       Des outils, documents, et recommandations pratiques
                       sélectionnés pour vous.
                     </p>
@@ -210,10 +209,10 @@ export default async function Home() {
                     <div className="mb-4 flex size-12 items-center justify-center rounded-md bg-sky-600 p-2 shadow-lg shadow-slate-600/30">
                       <BookOpenIcon className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
-                      Guides pratiques pour l’expatriation
+                    <h3 className="dark:text-zinc-100 text-lg font-semibold text-zinc-800">
+                      Guides pratiques pour s’installer au Japon
                     </h3>
-                    <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+                    <p className="dark:text-zinc-400 mt-2 text-zinc-600">
                       Des checklists, tutoriels et conseils concrets pour gérer
                       l’installation, la vie quotidienne et l’administratif.
                     </p>
@@ -225,31 +224,11 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="sm:px-8">
-        <div className="mx-auto mt-16 w-full max-w-7xl lg:px-8">
-          <div className="relative z-10 overflow-hidden rounded-lg bg-gradient-to-r from-slate-900 via-blue-950 to-sky-950 px-4 py-16 sm:px-8 lg:px-12">
-            <div className="absolute inset-0 z-0 bg-[url('/tokyo-night.jpg')] bg-cover bg-center opacity-10" />
-            <div className="relative z-10">
-              <h2 className="text-balance text-4xl tracking-tight text-white">
-                Estime ton futur salaire au Japon
-              </h2>
-              <p className="mt-6 text-lg text-white">
-                Un simulateur gratuit basé sur ton profil et les données du
-                marché 2025. 2 minutes suffisent pour savoir où tu te situes.
-              </p>
-              <Button href="/simulateur" variant="dark" className="mt-6">
-                Estimer mon salaire
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <Container className="mb-[150px] mt-24 md:mt-28" foo="bar">
-        <h2 className="text-center text-sm font-bold uppercase tracking-tight text-zinc-800 dark:text-zinc-100">
+        <h2 className="dark:text-zinc-100 text-center text-sm font-bold uppercase tracking-tight text-zinc-800">
           Blog
         </h2>
-        <h3 className="mb-12 mt-2 text-center text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+        <h3 className="dark:text-zinc-100 mb-12 mt-2 text-center text-3xl font-bold tracking-tight text-zinc-800">
           <Balancer>Mes derniers articles</Balancer>
         </h3>
         <div className="mb-[64px] flex flex-col gap-16">
@@ -260,34 +239,13 @@ export default async function Home() {
         <div className="text-center">
           <Link
             href="/articles"
-            className="flex items-center justify-center gap-1 font-normal text-zinc-900 hover:text-sky-600 dark:text-zinc-100 dark:hover:text-sky-400"
+            className="dark:text-zinc-100 dark:hover:text-sky-400 flex items-center justify-center gap-1 font-normal text-zinc-900 hover:text-sky-600"
           >
             Voir tous les articles{' '}
             <ChevronRightIcon className="mt-0.5 inline-block size-4" />
           </Link>
         </div>
       </Container>
-
-      {/* CTO Section Services */}
-      <div className="sm:px-8">
-        <div className="mx-auto mt-16 w-full max-w-7xl lg:px-8">
-          <div className="relative z-10 overflow-hidden rounded-lg bg-sky-800 px-4 py-16 sm:px-8 lg:px-12">
-            <div className="absolute inset-0 z-0 bg-[url('/tokyo-sky.jpg')] bg-contain bg-bottom opacity-10" />
-            <div className="relative z-10 text-center">
-              <h2 className="text-balance text-5xl font-semibold tracking-tight text-white">
-                Prêt à concrétiser votre projet au Japon ?
-              </h2>
-              <p className="mb-16 mt-6 text-lg text-white">
-                Découvrez mes services d&#39;accompagnement personnalisés pour
-                réussir votre expatriation dans la tech japonaise.
-              </p>
-              <Button href="/services" variant="dark" className="mt-6">
-                Découvrir mes services
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   )
 }

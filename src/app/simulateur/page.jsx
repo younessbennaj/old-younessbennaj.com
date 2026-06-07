@@ -2,12 +2,14 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { Alert } from '@/components/Alert'
 import { Button } from '@/components/Button'
 import { SalarySimulatorForm } from './components/SalarySimulatorForm'
 
 export default function SimulationPage() {
+  notFound()
   const router = useRouter()
   const [isEligible, setIsEligible] = React.useState(undefined) // undefined = pas encore répondu
 

@@ -15,7 +15,6 @@ import clsx from 'clsx'
 import { motion } from 'framer-motion'
 
 import { Container } from '@/components/Container'
-import { AnimatedGradientText } from '@/components/AnimatedGradientText'
 import avatarImage from '@/images/avatar.jpg'
 
 function CloseIcon(props) {
@@ -83,11 +82,7 @@ function MobileNavItem({ href, children }) {
   return (
     <li>
       <PopoverButton as={Link} href={href} className="block py-2">
-        {href === '/simulateur' ? (
-          <AnimatedGradientText speed={2}>{children}</AnimatedGradientText>
-        ) : (
-          children
-        )}
+        {children}
       </PopoverButton>
     </li>
   )
@@ -122,8 +117,6 @@ function MobileNavigation(props) {
             <MobileNavItem href="/">Accueil</MobileNavItem>
             <MobileNavItem href="/a-propos">À propos</MobileNavItem>
             <MobileNavItem href="/articles">Blog</MobileNavItem>
-            <MobileNavItem href="/services">Services</MobileNavItem>
-            <MobileNavItem href="/simulateur">Simulateur</MobileNavItem>
           </ul>
         </nav>
       </PopoverPanel>
@@ -145,11 +138,7 @@ function NavItem({ href, children }) {
             : 'font-semibold text-zinc-500 hover:text-zinc-950 dark:hover:text-slate-400',
         )}
       >
-        {href === '/simulateur' && !isActive ? (
-          <AnimatedGradientText speed={2}>{children}</AnimatedGradientText>
-        ) : (
-          children
-        )}
+        {children}
         {isActive && (
           <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-sky-500/0 via-sky-500/40 to-sky-500/0 dark:from-sky-400/0 dark:via-sky-400/40 dark:to-sky-400/0" />
         )}
@@ -165,8 +154,6 @@ function DesktopNavigation(props) {
         <NavItem href="/">Accueil</NavItem>
         <NavItem href="/a-propos">À propos</NavItem>
         <NavItem href="/articles">Blog</NavItem>
-        <NavItem href="/services">Services</NavItem>
-        <NavItem href="/simulateur">Simulateur</NavItem>
       </ul>
     </nav>
   )

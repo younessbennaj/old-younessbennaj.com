@@ -12,7 +12,7 @@ function SocialLink({ className, href, children, icon: Icon, ...delegated }) {
       <Link
         {...delegated}
         href={href}
-        className="hover: dark:hover: group flex text-sm font-medium text-zinc-800 transition dark:text-zinc-200"
+        className="hover: dark:hover: dark:text-zinc-200 group flex text-sm font-medium text-zinc-800 transition"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-sky-500" />
         <span className="ml-4">{children}</span>
@@ -35,7 +35,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'À propos',
   description:
-    'Découvrez le parcours de Youness Bennaj, développeur web basé à Tokyo, spécialisé dans l’expatriation au Japon pour les talents tech. Partage d’expériences, conseils et contenus pour réussir sa vie professionnelle au Japon.',
+    'Découvrez le parcours de Youness Bennaj, développeur web basé à Tokyo. Retour d’expérience, conseils et contenus concrets pour les talents tech qui souhaitent s’installer et travailler au Japon.',
 }
 
 export default function About() {
@@ -48,16 +48,16 @@ export default function About() {
               src={portraitImage}
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-auto w-full rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="dark:bg-zinc-800 aspect-auto w-full rounded-2xl bg-zinc-100 object-cover"
             />
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          <h1 className="dark:text-zinc-100 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
             Une nouvelle vie au Japon, et une envie : Transmettre ce que j’ai
             appris.
           </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+          <div className="dark:text-zinc-400 mt-6 space-y-7 text-base text-zinc-600">
             <p>
               Comme beaucoup d’enfants de ma génération, j’ai grandi avec le
               soft power japonais en toile de fond. Au fil des années, toutes
@@ -108,7 +108,7 @@ export default function About() {
             <SocialLink
               href="mailto:youness.bennaj@gmail.com"
               icon={MailIcon}
-              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+              className="dark:border-zinc-700/40 mt-8 border-t border-zinc-100 pt-8"
               target="_blank"
             >
               youness.bennaj@gmail.com

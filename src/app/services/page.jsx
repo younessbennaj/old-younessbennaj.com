@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 import Image from 'next/image'
@@ -103,6 +104,7 @@ const benefits2 = [
 ]
 
 export default function Services() {
+  notFound()
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
   return (
     <SimpleLayout
